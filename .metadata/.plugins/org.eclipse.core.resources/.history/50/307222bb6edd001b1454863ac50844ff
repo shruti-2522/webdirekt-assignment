@@ -1,0 +1,13 @@
+package com.user.customer.Dao;
+
+public class customerDao {
+	
+	private String  url="jdbc:mysql://localhost:3306/Customer?useSSL=false";
+	private  String username="root";
+	private String password="";
+	
+	
+	private static final String insert_cust="insert into tblcustomer"+"(name,addr1,addr2,street,country,zip,city,phone,fax,web,email,notes)values"+"(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+	
+
+}

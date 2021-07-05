@@ -1,0 +1,8 @@
+package com.user.customer.Dao;
+
+public class customerDao {
+	
+	private String  url="jdbc:mysql://localhost:3306/Customer?useSSL=false";
+	
+
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Shruti\Desktop\Webdirekt\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4238220888.index
+849953336.index
+2324036873.index
+2721132949.index
+4290940524.index
+113206119.index

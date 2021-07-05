@@ -1,0 +1,10 @@
+package com.user.customer.Model;
+
+public class Customer {
+
+	private  int  id;
+	private  String name;
+	private String  Address;
+	
+	
+}

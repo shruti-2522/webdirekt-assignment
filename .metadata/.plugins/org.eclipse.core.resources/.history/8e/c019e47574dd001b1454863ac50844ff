@@ -1,0 +1,5 @@
+package com.user.customer.Web;
+
+public @interface WebServlet {
+
+}

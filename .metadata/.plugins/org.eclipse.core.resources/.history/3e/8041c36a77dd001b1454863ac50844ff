@@ -1,0 +1,98 @@
+package com.user.customer.Web;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.user.customer.Dao.customerDao;
+
+@WebServlet("/")
+public class customerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private customerDao  customerdao;
+    
+    public void  init() {
+    	customerdao=new  customerDao();
+    	
+    	
+       
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	
+		doGet(request, response);
+	}
+    
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String action=request.getContextPath();
+	
+	try
+	{
+		switch (action) {
+		case "/new":
+			showNewForm(request,response);
+		 break;
+		case "/insert": 
+			 break;
+		case "/edit": 
+			 break;
+		case "/update": 
+			 break;
+		case "/delete": 
+			 break;
+			 
+		 
+		 
+
+		default:
+			break;
+		}
+	}
+	catch (Exception e) {
+		// TODO: handle exception
+	}
+	}
+	//new
+	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
+	{
+		RequestDispatcher r1=request.getRequestDispatcher("user-form.jsp");
+		r1.forward(request, response);
+		
+	}
+	
+	//insert
+	private void insertCustomer(HttpServletRequest request,HttpServletResponse response)
+	{
+			String name=request.getParameter("name");
+			String addr1=request.getParameter("addr1");
+			String addr2=request.getParameter("addr2");
+			String street=request.getParameter("street");
+			String country=request.getParameter("country");
+			int zip=Integer.parseInt(request.getParameter("zip"));
+			String city=request.getParameter("city");
+			int phone=Integer.parseInt(request.getParameter("phone"));
+			int fax=Integer.parseInt(request.getParameter("fax"));
+			String web=request.getParameter("web");
+			String email=request.getParameter("email");
+			String notes=request.getParameter("cnotes");
+			
+			
+			
+	}
+	
+	
+	
+	}
+	
+	
+
+	
+	
+
+}

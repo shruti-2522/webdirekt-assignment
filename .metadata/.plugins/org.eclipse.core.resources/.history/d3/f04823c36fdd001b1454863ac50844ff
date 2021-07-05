@@ -1,0 +1,72 @@
+package com.user.customer.Dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.user.customer.Model.Customer;
+
+public class customerDao {
+
+	private String url = "jdbc:mysql://localhost:3306/Customer?useSSL=false";
+	private String username = "root";
+	private String password = "";
+
+	private static final String insert_cust = "insert into tblcustomer"
+			+ "(name,addr1,addr2,street,country,zip,city,phone,fax,web,email,notes)values"
+			+ "(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+
+	private static final String select_cust_by_id = "select * from tblcustomer where id=?;";
+
+	private static final String select_cust = "select * from tblcustomer";
+
+	private static final String delete_cust = "delete from tblcustomer where id=?;";
+
+	protected Connection getConnection() {
+		Connection connection = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(url, username, password);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return connection;
+
+	}
+
+	public customerDao() {
+		
+	}
+	
+	
+	
+	
+	//insert customer
+	public void insertCustomer(Customer  customer)
+	{
+		try(Connection connection=getConnection();
+				)
+		{
+			
+		}
+		
+	}
+
+
+	
+	
+	//select customer by  id
+	
+	//select customer
+	//update customer
+	
+	//delete customer
+	
+	
+	//select custome
+	
+}

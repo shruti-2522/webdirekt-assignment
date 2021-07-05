@@ -1,0 +1,5 @@
+package com.user.customer.Model;
+
+public class Customer {
+
+}
